@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SurTaal - Hindi Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="background-circle circle-one"></div>
+    <div class="background-circle circle-two"></div>
+
+    <main class="music-player">
+
+        <!-- Header -->
+        <header class="player-header">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <div>
+                    <h1>SurTaal</h1>
+                    <p>Hindi Music Player</p>
+                </div>
+            </div>
+
+            <span class="day-badge">
+                Day 19
+            </span>
+
+        </header>
+
+
+        <!-- Album Section -->
+        <section class="album-section">
+
+            <div class="album-art" id="albumArt">
+
+                <div class="vinyl">
+
+                    <div class="vinyl-center">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="now-playing">
+                NOW PLAYING
+            </p>
+
+            <h2 id="songTitle">
+                Kesariya
+            </h2>
+
+            <p id="artistName">
+                Arijit Singh
+            </p>
+
+        </section>
+
+
+        <!-- Progress -->
+        <section class="progress-section">
+
+            <div class="time-row">
+
+                <span id="currentTime">
+                    0:00
+                </span>
+
+                <span id="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+        </section>
+
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <button
+                id="shuffleBtn"
+                class="control-btn"
+                title="Shuffle"
+            >
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button
+                id="prevBtn"
+                class="control-btn"
+                title="Previous"
+            >
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button
+                id="playBtn"
+                class="play-btn"
+                title="Play"
+            >
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button
+                id="nextBtn"
+                class="control-btn"
+                title="Next"
+            >
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+            <button
+                id="repeatBtn"
+                class="control-btn"
+                title="Repeat"
+            >
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+
+        </section>
+
+
+        <!-- Volume -->
+        <section class="volume-section">
+
+            <i class="fa-solid fa-volume-low"></i>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+            >
+
+            <i class="fa-solid fa-volume-high"></i>
+
+        </section>
+
+
+        <!-- Playlist -->
+        <section class="playlist-section">
+
+            <div class="playlist-header">
+
+                <div>
+                    <h3>
+                        <i class="fa-solid fa-headphones"></i>
+                        Hindi Playlist
+                    </h3>
+
+                    <p>
+                        Your favourite tracks
+                    </p>
+                </div>
+
+                <span id="songCount">
+                    5 Songs
+                </span>
+
+            </div>
+
+            <div
+                id="playlistContainer"
+                class="playlist-container"
+            ></div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Made with ❤️ for Hindi Music
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Audio -->
+    <audio id="audio"></audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
